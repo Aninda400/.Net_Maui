@@ -1,10 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Bill_Payment.MainPage">
-			 
-    <ScrollView>
-        <Label Text="Nice"/>
-    </ScrollView>
- 
+             x:Class="Bill_Payment.MainPage"
+             BackgroundColor="DarkSlateGrey"
+             >
+
+    <ContentPage.Resources>
+        <Color x:Key="Colour_Section">Gray</Color>
+        <Color x:Key="Lighter_font">White</Color>
+        <Color x:Key="Darker_font">LightBlue</Color>
+    </ContentPage.Resources>
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".3*"/>
+            <RowDefinition Height=".7*"/>
+        </Grid.RowDefinitions>
+        <Frame Padding="10"
+               BackgroundColor="{StaticResource Colour_Section}"
+               BorderColor="Transparent">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+            </Grid>
+        </Frame>
+    </Grid>
 </ContentPage>

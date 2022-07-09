@@ -4,20 +4,24 @@
              x:Class="Bill_Payment.MainPage"
              BackgroundColor="DarkSlateGrey"
              >
-
+<!--creating static resources-->
     <ContentPage.Resources>
         <Color x:Key="Colour_Section">Gray</Color>
         <Color x:Key="Lighter_font">White</Color>
         <Color x:Key="Darker_font">LightBlue</Color>
     </ContentPage.Resources>
+<!--using grid to seperate the upper and bottom section-->   
     <Grid Margin="15">
         <Grid.RowDefinitions>
             <RowDefinition Height=".3*"/>
             <RowDefinition Height=".7*"/>
         </Grid.RowDefinitions>
+        <!--creating a frame on the upper section to add elements-->
+       <!--added some padding and used the static resource-->
         <Frame Padding="10"
                BackgroundColor="{StaticResource Colour_Section}"
                BorderColor="Transparent">
+           <!--using a grid within the frame to seperate the elements even further-->
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
@@ -28,7 +32,7 @@
                     <RowDefinition Height=".1*"/>
                     <RowDefinition Height=".9*"/>
                 </Grid.RowDefinitions>
-                
+             <!--after creating the rows and columns of the upper section frame, now populating the fields-->   
                 <Label Grid.ColumnSpan="3" Grid.Row="0" Text="TOTAL PAY/PERSON" FontAttributes="Bold" 
                        HorizontalTextAlignment="Center" TextColor="{StaticResource Lighter_font }"/>
                 <Label x:Name="Total_payment" Grid.Row="1" Grid.Column="0" FontAttributes="Bold"
@@ -37,10 +41,12 @@
                        Text="$0.00"
                        TextColor="{StaticResource Lighter_font}"
                        />
+                <!--creating a vertical line in the middle using a boxview-->
                 <BoxView Grid.Column="1" Grid.Row="1" Margin="0,10,0,10"
                          VerticalOptions="Center"
                          Color="DarkGray"
                          />
+                <!--used a vertical stack to add elements vertically-->
                 <VerticalStackLayout Grid.Row="1" Grid.Column="2" 
                                      HorizontalOptions="Center" VerticalOptions="Center"
                                      >
@@ -51,5 +57,9 @@
                 </VerticalStackLayout>
             </Grid>
         </Frame>
+        <!--adding the bottom section-->
+        <Grid Grid.Row ="1" />
+        
+        
     </Grid>
 </ContentPage>

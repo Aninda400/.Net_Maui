@@ -37,7 +37,7 @@
                        Text="$0.00"
                        TextColor="{StaticResource Lighter_font}"
                        />
-                <BoxView Grid.Column="1" Grid.Row="1" Margin="0,10,0,0"
+                <BoxView Grid.Column="1" Grid.Row="1" Margin="0,10,0,10"
                          VerticalOptions="Center"
                          Color="DarkGray"
                          />

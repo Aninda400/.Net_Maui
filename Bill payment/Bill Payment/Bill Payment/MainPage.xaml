@@ -58,8 +58,20 @@
             </Grid>
         </Frame>
         <!--adding the bottom section-->
-        <Grid Grid.Row ="1" />
-        
+        <Grid Grid.Row ="1" Margin="0,20,0,0">
+            <!--creating two columns to separate name of the field and the elements-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".3*"/>
+                <ColumnDefinition Width=".7*"/>
+            </Grid.ColumnDefinitions>
+            <!--creating four rows for four fields-->
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+        </Grid>
         
     </Grid>
 </ContentPage>

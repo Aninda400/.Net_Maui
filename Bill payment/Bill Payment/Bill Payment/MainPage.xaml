@@ -21,9 +21,34 @@
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
-                    <ColumnDefinition />
+                    <ColumnDefinition Width="1"/>
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height=".1*"/>
+                    <RowDefinition Height=".9*"/>
+                </Grid.RowDefinitions>
+                
+                <Label Grid.ColumnSpan="3" Grid.Row="0" Text="TOTAL PAY/PERSON" FontAttributes="Bold" 
+                       HorizontalTextAlignment="Center" TextColor="{StaticResource Lighter_font }"/>
+                <Label x:Name="Total_payment" Grid.Row="1" Grid.Column="0" FontAttributes="Bold"
+                       HorizontalTextAlignment="Center" VerticalTextAlignment="Center" VerticalOptions="CenterAndExpand"
+                       FontSize="Large" 
+                       Text="$0.00"
+                       TextColor="{StaticResource Lighter_font}"
+                       />
+                <BoxView Grid.Column="1" Grid.Row="1" Margin="0,10,0,0"
+                         VerticalOptions="Center"
+                         Color="DarkGray"
+                         />
+                <VerticalStackLayout Grid.Row="1" Grid.Column="2" 
+                                     HorizontalOptions="Center" VerticalOptions="Center"
+                                     >
+                    <Label Text="SUBTOTAL" TextColor="{StaticResource Darker_font}"/>
+                    <Label x:Name="Sub_total_change" Text="$0.00" TextColor="{StaticResource Lighter_font}"/>
+                    <Label Text="TIP" Margin="0,10,0,0" TextColor="{StaticResource Darker_font}"/>
+                    <Label x:Name="Tip_change" Text="$0.00" TextColor="{StaticResource Lighter_font}"/>
+                </VerticalStackLayout>
             </Grid>
         </Frame>
     </Grid>

@@ -71,7 +71,24 @@
                 <RowDefinition />
                 <RowDefinition />
             </Grid.RowDefinitions>
+            <Label Text="Enter your bill: $" Grid.Row="0" Grid.Column="0"
+                   TextColor="{StaticResource Lighter_font}"
+                   VerticalOptions="Center"
+                   />
+            <Entry x:Name="Bill_text" Grid.Column="1" Grid.Row="0" BackgroundColor="{StaticResource Colour_Section}"
+                   Keyboard="Numeric" Placeholder="0.00" TextColor="{StaticResource Lighter_font}" VerticalOptions="Center"
+                   />
+            <Label Text="Choose your tip" Grid.Row="1" Grid.Column="0"
+                   TextColor="{StaticResource Lighter_font}"
+                   VerticalOptions="Center"
+                   />
+            <HorizontalStackLayout Grid.Row="1" Grid.Column="1" HeightRequest="70" HorizontalOptions="CenterAndExpand" Spacing="10">
+                <Button Text="10%" x:Name="tenPercent_tip" WidthRequest="70"/>
+                <Button Text="15%" x:Name="fifteenPercent_tip" WidthRequest="70"/>
+                <Button Text="20%" x:Name="twentyPercent_tip" WidthRequest="70"/>
+                
+            </HorizontalStackLayout>
         </Grid>
-        
+           
     </Grid>
 </ContentPage>

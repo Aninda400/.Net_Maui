@@ -18,8 +18,21 @@ public partial class MainPage : ContentPage
 
 	private void calculateTotal()
 	{
-		
-	}
+		//total tip
+		var total_tip = (Total_bill * tip) / 100;
+		//tip by person
+		var tip_by_person = total_tip / numberOfPeople;
+		//assign to label 
+		Tip_change.Text = $"{tip_by_person:C}";
+
+		//subtotal 
+		var subtotal = Total_bill / numberOfPeople;
+		Sub_total_change.Text = $"{subtotal:C}";
+
+		//Total amount 
+		var total_by_person = (Total_bill + total_tip) / numberOfPeople;
+		Total_payment.Text = $"{total_by_person:C}";
+    }
 
 	private void sliderTiplbl_ValueChanged(object sender, ValueChangedEventArgs e)
 	{
@@ -38,5 +51,24 @@ public partial class MainPage : ContentPage
 			sliderTip.Value = percentage;
 		}
 	}
+
+	private void minus_btn_Clicked(object sender, EventArgs e)
+	{
+		if(numberOfPeople > 1)
+		{
+			numberOfPeople--;
+		}
+        text_person_split_lbl.Text = numberOfPeople.ToString();
+		calculateTotal();
+    }
+
+	private void addition_btn_Clicked(object sender, EventArgs e)
+	{
+        
+        numberOfPeople++;
+        
+        text_person_split_lbl.Text = numberOfPeople.ToString();
+		calculateTotal();
+    }
 }
 

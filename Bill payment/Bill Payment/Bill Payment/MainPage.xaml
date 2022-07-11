@@ -106,12 +106,12 @@
                    />
             <HorizontalStackLayout HeightRequest="50" Grid.Row="3" Grid.Column="2"
                                    HorizontalOptions="Center" VerticalOptions="Center">
-                <Button x:Name="minus_btn" Text="-" WidthRequest="70"/>
+                <Button x:Name="minus_btn" Text="-" WidthRequest="70" Clicked="minus_btn_Clicked"/>
                 <Label x:Name="text_person_split_lbl" Text="1" WidthRequest="90" 
                        Margin="-5,0,-5,0" HeightRequest="50" FontSize="20"
                        HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" VerticalOptions="Center"
                        BackgroundColor="{StaticResource Colour_Section}" TextColor="{StaticResource Lighter_font}"/>
-                <Button x:Name="addition_btn" Text="+" WidthRequest="70"/>
+                <Button x:Name="addition_btn" Text="+" WidthRequest="70" Clicked="addition_btn_Clicked"/>
                 
             </HorizontalStackLayout>
         </Grid>
